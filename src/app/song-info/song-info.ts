@@ -19,4 +19,16 @@ export class SongInfo {
   displayMode(){
     return this.display_mode();
   }
+
+  formatDuration(duration:number | undefined): string {
+    // @ts-ignore
+    const totalSeconds = Math.floor(duration / 1000);
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+
+    const formattedMinutes = minutes < 10 ? `0${minutes}` :minutes.toString();
+    const formattedSeconds = seconds < 10 ? `0${seconds}` :seconds.toString();
+
+    return `${formattedMinutes}:${formattedSeconds}`;
+  }
 }

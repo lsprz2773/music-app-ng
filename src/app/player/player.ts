@@ -20,4 +20,5 @@ export class Player implements OnInit {
   ngOnInit() {
   }
 
+  protected readonly length = length;
 }

@@ -12,6 +12,7 @@ import {provideHttpClient, withInterceptors} from '@angular/common/http';
 import {authInterceptor} from './interceptors/auth-interceptor';
 import {addAuthHeaderInterceptor} from './interceptors/core/add-auth-header-interceptor';
 import { PlaylistControls } from './playlist-controls/playlist-controls';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PlaylistControls } from './playlist-controls/playlist-controls';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

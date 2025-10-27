@@ -7,8 +7,9 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 0;
   color: white;
   transition: 100ms all ease-out;
 }
@@ -31,19 +32,17 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: 30px;
 }
 
 :host(.card) .card-song-details .card-song-title{
   font-weight: 400;
-  font-size: 1em;
-  margin-bottom: 1vh;
+  font-size: 0.9em;
 
 }
 
 :host(.card) .card-song-details .card-song-artist{
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 :host(.main){
@@ -80,4 +79,8 @@
 :host(.main) .card-song-details .card-song-title{
   font-weight: 400;
   font-size: 1.6em;
+}
+
+h4{
+  font-weight: 300;
 }

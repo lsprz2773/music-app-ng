@@ -1,18 +1,18 @@
 :host{
-  height: 95%;
+  height: 97%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5%;
+  gap: 3%;
 }
 
 .main{
   width: 95%;
   height: 85%;
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 65% 35%;
   grid-template-rows: 100%;
   align-items: center;
   justify-items: center;
