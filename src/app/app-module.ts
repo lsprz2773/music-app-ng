@@ -13,6 +13,10 @@ import {authInterceptor} from './interceptors/auth-interceptor';
 import {addAuthHeaderInterceptor} from './interceptors/core/add-auth-header-interceptor';
 import { PlaylistControls } from './playlist-controls/playlist-controls';
 import {FormsModule} from '@angular/forms';
+import { SearchView } from './search-view/search-view';
+import { AlbumCard } from './album-card/album-card';
+import { ArtistCard } from './artist-card/artist-card';
+import { SongCard } from './song-card/song-card';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import {FormsModule} from '@angular/forms';
     AudioController,
     SongInfo,
     Player,
-    PlaylistControls
+    PlaylistControls,
+    SearchView,
+    AlbumCard,
+    ArtistCard,
+    SongCard
   ],
   imports: [
     BrowserModule,
