@@ -12,5 +12,5 @@ export const addAuthHeaderInterceptor: HttpInterceptorFn = (req, next) => {
   const newReq = req.clone({
     headers: req.headers.append('Authorization', `Bearer ${_cookieStorage.getKeyValue('access_token')}`),
   })
-  return next(req);
+  return next(newReq);
 };

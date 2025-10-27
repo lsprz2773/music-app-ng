@@ -2,6 +2,6 @@
 <app-search-bar></app-search-bar>
 <div class="main">
   <app-song-info [song]="album?.tracks?.pop()" [cover]="album?.images?.at(0)" displayMode="main"></app-song-info>
-  <app-playlist></app-playlist>
+  <app-playlist [playlist]="album?.tracks" [cover]="album?.images?.at(0)"></app-playlist>
 </div>
 }

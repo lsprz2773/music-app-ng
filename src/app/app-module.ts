@@ -8,7 +8,10 @@ import { SearchBar } from './search-bar/search-bar';
 import { AudioController } from './audio-controller/audio-controller';
 import { SongInfo } from './song-info/song-info';
 import { Player } from './player/player';
-import {provideHttpClient} from '@angular/common/http';
+import {provideHttpClient, withInterceptors} from '@angular/common/http';
+import {authInterceptor} from './interceptors/auth-interceptor';
+import {addAuthHeaderInterceptor} from './interceptors/core/add-auth-header-interceptor';
+import { PlaylistControls } from './playlist-controls/playlist-controls';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,8 @@ import {provideHttpClient} from '@angular/common/http';
     SearchBar,
     AudioController,
     SongInfo,
-    Player
+    Player,
+    PlaylistControls
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,12 @@ import {provideHttpClient} from '@angular/common/http';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideHttpClient(),
+    provideHttpClient(
+      withInterceptors([
+        authInterceptor,
+        addAuthHeaderInterceptor
+      ])
+    ),
   ],
   bootstrap: [App]
 })

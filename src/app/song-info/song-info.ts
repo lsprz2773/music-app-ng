@@ -8,7 +8,7 @@ import {Track} from '../interfaces/track';
   templateUrl: './song-info.html',
   styleUrl: './song-info.css',
   host:{
-    '[class]': 'displayMode()'
+    '[class]': 'displayMode()',
   }
 })
 export class SongInfo {
@@ -17,6 +17,6 @@ export class SongInfo {
   cover = input.required<Image | undefined>();
 
   displayMode(){
-    return this.display_mode;
+    return this.display_mode();
   }
 }

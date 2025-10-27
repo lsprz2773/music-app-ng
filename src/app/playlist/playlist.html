@@ -1,1 +1,6 @@
-<p>playlist works!</p>
+<app-playlist-controls></app-playlist-controls>
+<div class="playlist-container">
+  @for (song of playlist(); track song.id){
+    <app-song-info [song]="song" [cover]="cover()" displayMode="card"></app-song-info>
+  } @empty { }
+</div>
