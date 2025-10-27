@@ -1,0 +1,40 @@
+:host{
+  height: 100%;
+  width: 95%;
+  display: grid;
+  grid-template-columns: 55% 40%;
+  grid-template-rows: 100%;
+  align-items: center;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-left: 5%;
+}
+
+:host h4{
+  color: white;
+}
+
+.controls-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.playlist-controls-icon-container{
+  padding: 5px 10px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  transition: 100ms all ease-out;
+}
+
+.playlist-controls-icon-container:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 100ms all ease-in;
+  cursor: pointer;
+}
+
+.playlist-controls-icon-container i{
+  font-size: 1.2em;
+  color: white;
+}

@@ -7,5 +7,77 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
+  transition: 100ms all ease-out;
+}
+
+:host(.card):hover{
+  background-color: lightgray;
+  color: black;
+  transition: 100ms all ease-in;
+  cursor: pointer;
+}
+
+:host(.card) .card-song-img{
+  height: 10vh;
+  width: 10vh;
+  border-radius: 5%;
+}
+
+:host(.card) .card-song-details{
+  width: 10vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 30px;
+}
+
+:host(.card) .card-song-details .card-song-title{
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 1vh;
+
+}
+
+:host(.card) .card-song-details .card-song-artist{
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+:host(.main){
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+:host(.main) .card-song-img{
+  height: 300px;
+  width: 300px;
+  border-radius: 3%;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2vh;
+
+}
+
+:host(.main) .card-song-details{
+  width: 300px;
+  align-content: baseline;
+  overflow: hidden;
+  text-align: center;
+}
+
+:host(.main) .card-song-details .card-song-artist{
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+:host(.main) .card-song-details .card-song-title{
+  font-weight: 400;
+  font-size: 1.6em;
 }

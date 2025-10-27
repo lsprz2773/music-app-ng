@@ -1,0 +1,38 @@
+:host{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#control-bar{
+  width: 80%;
+}
+
+#control-bar::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  opacity: 0;
+  transition: 200ms all ease-out;
+}
+
+#control-bar::-webkit-slider-thumb:hover{
+  opacity: 1;
+  transition: 200ms all ease-in;
+}
+
+.player-buttons{
+  margin-top: 20px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+i{
+  font-size: 2em;
+  color: white;
+}
