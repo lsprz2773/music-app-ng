@@ -1,4 +1,6 @@
-import { Component, signal } from '@angular/core';
+import {Component, OnInit, signal} from '@angular/core';
+import {SpotifyLoginService} from './services/spotify-api/spotify-login-service';
+import {CookiesStorageService} from './services/general/cookies-storage-service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,14 @@ import { Component, signal } from '@angular/core';
   standalone: false,
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('music-app');
+export class App implements OnInit {
+  constructor(
+    private _spotifyLogin: SpotifyLoginService,
+    private _cookieStorage: CookiesStorageService
+  ) {}
+
+  ngOnInit() {
+    if(!this._cookieStorage.exists('access_token') || this._cookieStorage.isCookieValid('access_token'))
+      this._spotifyLogin.getAccessToken().subscribe();
+  }
 }
