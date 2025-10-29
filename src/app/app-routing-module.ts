@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {Player} from './player/player';
+import {SearchView} from './search-view/search-view';
+import {SongMainView} from './song-main-view/song-main-view';
 
 const routes: Routes = [
   {
     path: '',
-    component: Player
+    component: SongMainView
+  },
+  {
+    path: 'search/:query',
+    component: SearchView
   }
 ];
 

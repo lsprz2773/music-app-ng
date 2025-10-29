@@ -1,9 +1,11 @@
-import {inject, Injectable} from '@angular/core';
+import {inject, Injectable, OnInit} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {map, Observable} from 'rxjs';
 import {environment} from '../../../environments/environment.development';
 import {CookiesStorageService} from '../general/cookies-storage-service';
 import {Artist} from '../../interfaces/artist';
+import {Track} from '../../interfaces/track';
+import {Album} from '../../interfaces/album';
 
 
 @Injectable({
@@ -28,22 +30,13 @@ export class SpotifySearchService {
     return this._http.get(`${environment.API_URL}/search`,{params,headers}).pipe(
       map((response:any) => {
         return{
-          tracks: response.tracks || {items: []},
-          albums: response.albums || {items: []},
-          artists: {
-            items: this.mapArtists(response.artists?.items || [])
-          }
+          tracks: response.tracks.items,
+          albums: response.albums.items,
+          artists: response.artists.items,
         }
       })
     );
   }
 
-  private mapArtists(spotifyResponse: any[]):Artist[]{
-    return spotifyResponse.map(artist => ({
-      id: artist.id,
-      name: artist.name,
-      image: artist.images[0]?.url || '',
-      followers: artist.followers?.total || 0
-    }));
-  }
+
 }

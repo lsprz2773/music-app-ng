@@ -1,15 +1,15 @@
 <div class="tracks">
-  @for (track of tracks(); track track.id ){
+  @for (track of tracks; track track.id ){
     <app-song-card [song]="track" [cover]="track.album?.images?.[0]"></app-song-card>
   }
 </div>
 <div class="albums">
-  @for (album of albums(); track album.id){
-    <app-album-card [album]="album" [cover]="cover()"></app-album-card>
+  @for (album of albums; track album.id){
+    <app-album-card [album]="album" [cover]="album?.images?.[0]"></app-album-card>
   }
 </div>
 <div class="artists">
-  @for (artist of artists(); track artist.id){
-    <app-artist-card [artist]="artist" [image]="images()"></app-artist-card>
+  @for (artist of artists; track artist.id){
+    <app-artist-card [artist]="artist" [image]="artist.image"></app-artist-card>
   }
 </div>

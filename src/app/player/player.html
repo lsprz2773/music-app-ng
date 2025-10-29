@@ -1,7 +1,9 @@
 @if (album$ | async; as album){
 <app-search-bar></app-search-bar>
 <div class="main">
-  <app-song-info [song]="album?.tracks?.at(0)" [cover]="album?.images?.at(0)" displayMode="main"></app-song-info>
+  <div class="main-song">
+    <router-outlet></router-outlet>
+  </div>
   <app-playlist [playlist]="album?.tracks?.slice(1, album.tracks.length)" [cover]="album?.images?.at(0)"></app-playlist>
 </div>
   <app-audio-controller></app-audio-controller>

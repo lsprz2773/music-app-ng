@@ -1,16 +1,15 @@
 import {Component, OnInit} from '@angular/core';
-import {SpotifyAlbumService} from '../services/spotify-api/spotify-album-service';
 import {Observable} from 'rxjs';
 import {Album} from '../interfaces/album';
+import {SpotifyAlbumService} from '../services/spotify-api/spotify-album-service';
 
 @Component({
-  selector: 'app-player',
+  selector: 'app-song-main-view',
   standalone: false,
-  templateUrl: './player.html',
-  styleUrl: './player.css',
+  templateUrl: './song-main-view.html',
+  styleUrl: './song-main-view.css',
 })
-export class Player implements OnInit {
-
+export class SongMainView implements OnInit {
   album$: Observable<Album>;
 
   constructor(private _spotifyAlbum: SpotifyAlbumService) {
@@ -19,5 +18,4 @@ export class Player implements OnInit {
 
   ngOnInit() {
   }
-
 }

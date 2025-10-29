@@ -17,6 +17,7 @@ import { SearchView } from './search-view/search-view';
 import { AlbumCard } from './album-card/album-card';
 import { ArtistCard } from './artist-card/artist-card';
 import { SongCard } from './song-card/song-card';
+import { SongMainView } from './song-main-view/song-main-view';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SongCard } from './song-card/song-card';
     SearchView,
     AlbumCard,
     ArtistCard,
-    SongCard
+    SongCard,
+    SongMainView
   ],
   imports: [
     BrowserModule,
