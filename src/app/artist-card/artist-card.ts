@@ -10,5 +10,4 @@ import {Image} from '../interfaces/image';
 })
 export class ArtistCard {
   artist = input.required<Artist>();
-  image = input.required<string>();
 }

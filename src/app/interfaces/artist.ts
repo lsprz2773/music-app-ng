@@ -1,6 +1,8 @@
 export interface Artist {
   id: string;
   name: string;
-  image: string;
+  images:[{
+    url: string;
+  }];
   followers: number;
 }

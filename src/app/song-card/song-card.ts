@@ -10,7 +10,6 @@ import {Image} from '../interfaces/image';
 })
 export class SongCard {
   song = input.required<Track>();
-  cover = input.required<Image | undefined>();
 
   formatDuration(duration:number | undefined): string {
     // @ts-ignore

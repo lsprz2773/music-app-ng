@@ -1,19 +1,20 @@
 :root{
   height: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:grid;
+  grid-template-rows: 8% 25% 8% 25% 8% 26%;
+  grid-template-columns: 100%;
 }
 
 main{
   height: 100%;
-  width: 95%;
+  width: 94%;
   padding: 20px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   background-color: rgba(255,255,255,0.2);
+  gap: 20px;
 }
 
 h4{
@@ -26,7 +27,6 @@ h4{
   flex-direction: row;
   overflow: hidden;
   overflow-x: scroll;
-  gap: 25px;
   align-items: center;
   text-align: center;
 }

@@ -10,5 +10,4 @@ import {Image} from '../interfaces/image';
 })
 export class AlbumCard {
   album = input.required<Album>();
-  cover = input.required<Image | undefined>();
 }
