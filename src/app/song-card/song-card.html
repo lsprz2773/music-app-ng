@@ -1,1 +1,4 @@
-<p>song-card works!</p>
+<img [src]="cover()">
+<h5>{{song().name}}</h5>
+<h5>{{song().artists}}</h5>
+<h6>{{formatDuration(song().duration_ms)}}</h6>
