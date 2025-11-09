@@ -1,4 +1,4 @@
-import {TokenResponse} from '../../../interfaces/spotify-api/spotify-token-response';
+import {TokenResponse} from '../../interfaces/spotify-api/spotify-token-response';
 
 
 export function isTokenResponse(body: unknown): body is TokenResponse{

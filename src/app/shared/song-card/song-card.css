@@ -1,0 +1,11 @@
+:root{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+}
+
+.song-img{
+  width: 50px;
+  height: 50px;
+}
