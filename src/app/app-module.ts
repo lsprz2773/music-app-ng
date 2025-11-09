@@ -1,23 +1,23 @@
-import {NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection} from '@angular/core';
+import {NgModule, provideBrowserGlobalErrorListeners} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { Playlist } from './playlist/playlist';
-import { SearchBar } from './search-bar/search-bar';
-import { AudioController } from './audio-controller/audio-controller';
-import { SongInfo } from './song-info/song-info';
-import { Player } from './player/player';
+import { Playlist } from './features/player/components/playlist/playlist';
+import { SearchBar } from './features/player/components/search-bar/search-bar';
+import { AudioController } from './features/player/components/audio-controller/audio-controller';
+import { SongInfo } from './features/player/components/search-view/items/song-info/song-info';
+import { Player } from './features/player/player';
 import {provideHttpClient, withInterceptors} from '@angular/common/http';
-import {authInterceptor} from './interceptors/auth-interceptor';
-import {addAuthHeaderInterceptor} from './interceptors/core/add-auth-header-interceptor';
-import { PlaylistControls } from './playlist-controls/playlist-controls';
+import {authInterceptor} from './core/interceptors/auth-interceptor';
+import {addAuthHeaderInterceptor} from './core/interceptors/core/add-auth-header-interceptor';
+import { PlaylistControls } from './features/player/components/playlist/playlist-controls/playlist-controls';
 import {FormsModule} from '@angular/forms';
-import { SearchView } from './search-view/search-view';
-import { AlbumCard } from './album-card/album-card';
-import { ArtistCard } from './artist-card/artist-card';
-import { SongCard } from './song-card/song-card';
-import { SongMainView } from './song-main-view/song-main-view';
+import { SearchView } from './features/player/components/search-view/search-view';
+import { AlbumCard } from './features/player/components/search-view/items/album-card/album-card';
+import { ArtistCard } from './features/player/components/search-view/items/artist-card/artist-card';
+import { SongCard } from './shared/song-card/song-card';
+import { SongMainView } from './features/player/components/song-main-view/song-main-view';
 
 @NgModule({
   declarations: [

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {SearchView} from './search-view/search-view';
-import {SongMainView} from './song-main-view/song-main-view';
+import {SearchView} from './features/player/components/search-view/search-view';
+import {SongMainView} from './features/player/components/song-main-view/song-main-view';
 
 const routes: Routes = [
   {

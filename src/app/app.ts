@@ -1,6 +1,6 @@
 import {Component, OnInit, signal} from '@angular/core';
-import {SpotifyLoginService} from './services/spotify-api/spotify-login-service';
-import {CookiesStorageService} from './services/general/cookies-storage-service';
+import {CookiesStorageService} from './core/services/core/cookies-storage-service';
+import {SpotifyLoginService} from './core/services/spotify-api/spotify-login-service';
 
 @Component({
   selector: 'app-root',
