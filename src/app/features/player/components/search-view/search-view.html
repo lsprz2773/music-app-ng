@@ -1,21 +1,23 @@
 <main>
-  <h4>Artists</h4>
-  <div class="artists">
-    @for (artist of artists; track artist.id){
-      <app-artist-card [artist]="artist"></app-artist-card>
-    }
-  </div>
-  <h4>Tracks</h4>
-  <div class="tracks">
-    @for (track of tracks; track track.id ){
-      <app-song-card [song]="track"></app-song-card>
-    }
-  </div>
-  <h4>Albums</h4>
-  <div class="albums">
-    @for (album of albums; track album.id){
-      <app-album-card [album]="album"></app-album-card>
-    }
+  <div>
+    <h4>Artists</h4>
+    <div class="artists">
+      @for (artist of artists; track artist.id){
+        <app-artist-card [artist]="artist"></app-artist-card>
+      }
+    </div>
+    <h4>Tracks</h4>
+    <div class="tracks">
+      @for (track of tracks; track track.id ){
+        <app-song-card [song]="track"></app-song-card>
+      }
+    </div>
+    <h4>Albums</h4>
+    <div class="albums">
+      @for (album of albums; track album.id){
+        <app-album-card [album]="album"></app-album-card>
+      }
+    </div>
   </div>
 </main>
 
