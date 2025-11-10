@@ -6,7 +6,7 @@ import { App } from './app';
 import { Playlist } from './features/player/components/playlist/playlist';
 import { SearchBar } from './features/player/components/search-bar/search-bar';
 import { AudioController } from './features/player/components/audio-controller/audio-controller';
-import { SongInfo } from './features/player/components/search-view/items/song-info/song-info';
+import { SongCard } from './features/player/components/search-view/items/song-card/song-card';
 import { Player } from './features/player/player';
 import {provideHttpClient, withInterceptors} from '@angular/common/http';
 import {authInterceptor} from './core/interceptors/auth-interceptor';
@@ -16,7 +16,7 @@ import {FormsModule} from '@angular/forms';
 import { SearchView } from './features/player/components/search-view/search-view';
 import { AlbumCard } from './features/player/components/search-view/items/album-card/album-card';
 import { ArtistCard } from './features/player/components/search-view/items/artist-card/artist-card';
-import { SongCard } from './shared/song-card/song-card';
+import { SongInfo } from './shared/song-info/song-info';
 import { SongMainView } from './features/player/components/song-main-view/song-main-view';
 
 @NgModule({

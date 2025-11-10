@@ -1,15 +1,26 @@
 import {Component, input} from '@angular/core';
 import {Track} from '../../core/interfaces/track';
+import {Image} from '../../core/interfaces/image';
+
 
 
 @Component({
-  selector: 'app-song-card',
+  selector: 'app-song-info',
   standalone: false,
-  templateUrl: './song-card.html',
-  styleUrl: './song-card.css',
+  templateUrl: './song-info.html',
+  styleUrl: './song-info.css',
+  host:{
+    '[class]': 'displayMode()',
+  }
 })
-export class SongCard {
-  song = input.required<Track>();
+export class SongInfo {
+  display_mode = input.required<string>({alias: 'displayMode'});
+  song = input.required<Track | undefined>();
+  cover = input.required<Image | undefined>();
+
+  displayMode(){
+    return this.display_mode();
+  }
 
   formatDuration(duration:number | undefined): string {
     // @ts-ignore
