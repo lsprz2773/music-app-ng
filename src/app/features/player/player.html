@@ -4,7 +4,7 @@
   <div class="main-song">
     <router-outlet></router-outlet>
   </div>
-  <app-playlist [playlist]="album?.tracks?.slice(1, album.tracks.length)" [cover]="album?.images?.at(0)"></app-playlist>
+  <app-playlist [playlist]="album?.tracks" [cover]="album?.images?.at(0)"></app-playlist>
 </div>
   <app-audio-controller></app-audio-controller>
 }

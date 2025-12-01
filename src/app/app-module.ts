@@ -1,4 +1,4 @@
-import {NgModule, provideBrowserGlobalErrorListeners} from '@angular/core';
+import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
@@ -8,11 +8,11 @@ import { SearchBar } from './features/player/components/search-bar/search-bar';
 import { AudioController } from './features/player/components/audio-controller/audio-controller';
 import { SongCard } from './features/player/components/search-view/items/song-card/song-card';
 import { Player } from './features/player/player';
-import {provideHttpClient, withInterceptors} from '@angular/common/http';
-import {authInterceptor} from './core/interceptors/auth-interceptor';
-import {addAuthHeaderInterceptor} from './core/interceptors/core/add-auth-header-interceptor';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { authInterceptor } from './core/interceptors/auth-interceptor';
+import { addAuthHeaderInterceptor } from './core/interceptors/core/add-auth-header-interceptor';
 import { PlaylistControls } from './features/player/components/playlist/playlist-controls/playlist-controls';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { SearchView } from './features/player/components/search-view/search-view';
 import { AlbumCard } from './features/player/components/search-view/items/album-card/album-card';
 import { ArtistCard } from './features/player/components/search-view/items/artist-card/artist-card';

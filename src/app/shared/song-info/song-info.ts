@@ -11,12 +11,14 @@ import {Image} from '../../core/interfaces/image';
   styleUrl: './song-info.css',
   host:{
     '[class]': 'displayMode()',
+    '[class.active]': 'isActive()',
   }
 })
 export class SongInfo {
   display_mode = input.required<string>({alias: 'displayMode'});
   song = input.required<Track | undefined>();
   cover = input.required<Image | undefined>();
+  isActive = input<boolean>(false);
 
   displayMode(){
     return this.display_mode();

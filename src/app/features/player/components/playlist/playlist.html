@@ -1,6 +1,6 @@
 <app-playlist-controls></app-playlist-controls>
 <div class="playlist-container">
-  @for (song of playlist(); track song.id){
-    <app-song-info [song]="song" [cover]="cover()" displayMode="card"></app-song-info>
+  @for (song of playlist(); track song.id; let i = $index){
+    <app-song-info [song]="song" [cover]="cover()" displayMode="card" [isActive]="playerState.getCurrentIndex() === i"></app-song-info>
   } @empty { }
 </div>

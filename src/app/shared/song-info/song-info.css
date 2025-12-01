@@ -14,7 +14,7 @@
   transition: 100ms all ease-out;
 }
 
-:host(.card):hover{
+:host(.card.active) {
   background-color: lightgray;
   color: black;
   transition: 100ms all ease-in;

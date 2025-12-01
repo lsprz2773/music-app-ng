@@ -32,11 +32,20 @@
   align-items: center;
 }
 
+.player-buttons span.disabled {
+  opacity: 0.3;
+  cursor: not-allowed !important;
+}
+.player-buttons span:not(.disabled) {
+  cursor: pointer;
+}
+.player-buttons span:not(.disabled):hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
 i{
   font-size: 2em;
   color: white;
 }
 
-i:hover{
-  cursor: pointer;
-}

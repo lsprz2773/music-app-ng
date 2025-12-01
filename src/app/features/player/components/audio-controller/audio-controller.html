@@ -1,13 +1,13 @@
 <audio controls hidden></audio>
 <input type="range" id="control-bar" [value]="0">
 <div class="player-buttons">
-    <span class="back">
+    <span class="back" (click)="onPrevious()" [ngClass]="{disabled: !playerState.hasPrevious()}">
         <i class="fa-solid fa-backward-step"></i>
     </span>
   <span class="play">
         <i class="fa-solid fa-play"></i>
     </span>
-  <span class="next">
+  <span class="next" (click)="onNext()" [ngClass]="{disabled: !playerState.hasNext()}">
         <i class="fa-solid fa-forward-step"></i>
     </span>
 </div>

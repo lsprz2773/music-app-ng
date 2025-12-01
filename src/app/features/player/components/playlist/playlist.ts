@@ -1,7 +1,7 @@
 import {Component, input} from '@angular/core';
 import {Track} from '../../../../core/interfaces/track';
 import {Image} from '../../../../core/interfaces/image';
-
+import { PlayerStateService } from '../../../../core/services/core/player-state-service';
 
 @Component({
   selector: 'app-playlist',
@@ -12,4 +12,6 @@ import {Image} from '../../../../core/interfaces/image';
 export class Playlist {
   playlist = input.required<Track[] | undefined>();
   cover = input.required<Image | undefined>();
+
+  constructor(public playerState: PlayerStateService) { }
 }
