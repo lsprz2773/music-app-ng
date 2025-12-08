@@ -3,6 +3,8 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {map, Observable} from 'rxjs';
 import {environment} from '../../../../environments/environment.development';
 import {CookiesStorageService} from '../core/cookies-storage-service';
+import {SpotifySearchResult} from '../../interfaces/spotify-api/spotify-search-result';
+import {SpotifySearchResponse} from '../../interfaces/spotify-api/spotify-search-response';
 
 
 @Injectable({
@@ -15,7 +17,7 @@ export class SpotifySearchService {
 
   _cookieStorage: CookiesStorageService = inject(CookiesStorageService);
 
-  search(query: string): Observable<any> {
+  search(query: string): Observable<SpotifySearchResult> {
     const params = new HttpParams()
       .set('q', query)
       .set('type', 'track,album,artist')
@@ -26,7 +28,7 @@ export class SpotifySearchService {
       'Authorization': `Bearer ${this._cookieStorage.getKeyValue('access_token')}`
     });
 
-    return this._http.get(`${environment.API_URL}/search`, {params, headers}).pipe(
+    return this._http.get<SpotifySearchResponse>(`${environment.API_URL}/search`, {params, headers}).pipe(
       map((response: any) => {
         return {
           tracks: response.tracks.items,

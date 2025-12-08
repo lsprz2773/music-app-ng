@@ -18,7 +18,6 @@
   background-color: lightgray;
   color: black;
   transition: 100ms all ease-in;
-  cursor: pointer;
 }
 
 :host(.card) .card-song-img{

@@ -11,13 +11,13 @@ import {SpotifyAlbumService} from '../../core/services/spotify-api/spotify-album
 })
 export class Player implements OnInit {
 
-  album$: Observable<Album>;
+  album$!: Observable<Album>;
 
   constructor(private _spotifyAlbum: SpotifyAlbumService) {
-    this.album$ = this._spotifyAlbum.getAlbum("42URGYboRJEQPwXj7wlsoB");
   }
 
   ngOnInit() {
+    this.album$ = this._spotifyAlbum.getAlbum("42URGYboRJEQPwXj7wlsoB");
   }
 
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {environment} from '../../../../environments/environment.development';
 import {Observable} from 'rxjs';
+import {TokenResponse} from '../../interfaces/spotify-api/spotify-token-response';
 
 @Injectable({
   providedIn: 'root'
@@ -9,13 +10,13 @@ import {Observable} from 'rxjs';
 export class SpotifyLoginService {
   constructor(private _http: HttpClient) { }
 
-  getAccessToken(): Observable<any> {
+  getAccessToken(): Observable<TokenResponse> {
     const body = new HttpParams()
       .set('grant_type', 'client_credentials')
       .set('client_id', environment.CLIENT_ID)
       .set('client_secret', environment.CLIENT_SECRET)
 
-    return this._http.post<any>(
+    return this._http.post<TokenResponse>(
       environment.AUTH_API_URL,
       body.toString(),
       {
