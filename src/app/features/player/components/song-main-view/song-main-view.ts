@@ -15,7 +15,7 @@ export class SongMainView implements OnInit {
   album$: Observable<Album>;
 
   constructor(private _spotifyAlbum: SpotifyAlbumService, private _playerState: PlayerStateService) {
-    this.album$ = this._spotifyAlbum.getAlbum("42URGYboRJEQPwXj7wlsoB");
+    this.album$ = this._spotifyAlbum.getAlbum("0pcO9L2DIQ6l1GGGIlH6Pk");
   }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class SongMainView implements OnInit {
       }
     })
   }
-  
+
   get playerState(){
     return this._playerState;
   }

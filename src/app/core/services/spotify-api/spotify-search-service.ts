@@ -15,8 +15,6 @@ export class SpotifySearchService {
   constructor(private _http: HttpClient) {
   }
 
-  _cookieStorage: CookiesStorageService = inject(CookiesStorageService);
-
   search(query: string): Observable<SpotifySearchResult> {
     const params = new HttpParams()
       .set('q', query)
@@ -24,12 +22,9 @@ export class SpotifySearchService {
       .set('market', 'ES')
       .set('limit', '10')
       .set('offset', '0');
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${this._cookieStorage.getKeyValue('access_token')}`
-    });
 
-    return this._http.get<SpotifySearchResponse>(`${environment.API_URL}/search`, {params, headers}).pipe(
-      map((response: any) => {
+    return this._http.get<SpotifySearchResponse>(`${environment.API_URL}/search`, {params}).pipe(
+      map((response: SpotifySearchResponse) => {
         return {
           tracks: response.tracks.items,
           albums: response.albums.items,

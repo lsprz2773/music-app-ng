@@ -17,7 +17,7 @@ export class Player implements OnInit {
   }
 
   ngOnInit() {
-    this.album$ = this._spotifyAlbum.getAlbum("42URGYboRJEQPwXj7wlsoB");
+    this.album$ = this._spotifyAlbum.getAlbum("0pcO9L2DIQ6l1GGGIlH6Pk");
   }
 
 }

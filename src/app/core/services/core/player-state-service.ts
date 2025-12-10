@@ -1,4 +1,4 @@
-import { Injectable, signal, Signal } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Track } from '../../interfaces/track';
 
 @Injectable({
@@ -10,7 +10,6 @@ export class PlayerStateService {
 
   getCurrentTrack= () => this.tracks()[this.currentTrackIndex()]
   getCurrentIndex= () => this.currentTrackIndex()
-  getTracks= () => this.tracks()
 
   setTracks(tracks: Track[]){
     this.tracks.set(tracks);
@@ -20,7 +19,7 @@ export class PlayerStateService {
   nextTrack(){
     const currentIndex = this.currentTrackIndex();
     const totalTracks = this.tracks().length;
-    
+
     if(currentIndex < totalTracks - 1){
       this.currentTrackIndex.set(currentIndex + 1);
     }

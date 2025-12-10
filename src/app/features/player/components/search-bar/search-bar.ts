@@ -14,11 +14,10 @@ export class SearchBar {
   constructor(private router: Router) { }
 
   onSearch(){
-    if (!this.searchTerm.trim()) {
+    if (this.searchTerm === "") {
       return
     }
-
-    this.searched = true;
-    this.router.navigate(['search', this.searchTerm]);
+      this.searched = true;
+      this.router.navigate(['search', this.searchTerm]);
   }
 }

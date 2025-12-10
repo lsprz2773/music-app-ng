@@ -27,9 +27,9 @@ export class SearchView implements OnInit {
           this.tracks = result.tracks;
           this.albums = result.albums;
           this.artists = result.artists;
-          console.log(this.tracks)
-          console.log(this.albums)
-          console.log(this.artists)
+          //console.log(this.tracks)
+          //console.log(this.albums)
+          //console.log(this.artists)
         })
       }
     })

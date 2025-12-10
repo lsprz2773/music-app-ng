@@ -14,15 +14,8 @@ export class App implements OnInit {
     private _cookieStorage: CookiesStorageService
   ) {}
 
-  //ngOnInit() {
-    //if(!this._cookieStorage.exists('access_token') || !this._cookieStorage.isCookieValid('access_token'))
-      //this._spotifyLogin.getAccessToken().subscribe();
-  //}
   ngOnInit() {
-    console.log('🔥 Forzando petición de token...');
-    this._spotifyLogin.getAccessToken().subscribe({
-      next: (res) => console.log('✅ Token recibido:', res),
-      error: (err) => console.error('❌ Error token:', err)
-    });
+    if(!this._cookieStorage.exists('access_token') || !this._cookieStorage.isCookieValid('access_token'))
+    this._spotifyLogin.getAccessToken().subscribe();
   }
 }

@@ -44,6 +44,7 @@ app-song-card:hover,
 app-album-card:hover{
   background-color: rgba(255,255,255,0.3);
   transition: 100ms all ease-out;
+  cursor: pointer;
 }
 
 div{
